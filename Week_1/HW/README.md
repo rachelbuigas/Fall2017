@@ -1,4 +1,8 @@
-Ingredients
+#Week 1
+
+Week 2 Homework: <br>
+
+Ingredients <br>
 1 mango, peeled and diced
 1/2 cup peeled, diced cucumber
 1 tablespoon finely chopped jalapeno
@@ -7,6 +11,9 @@ Ingredients
 1/3 cup roughly chopped cilantro leaves
 Salt and pepper
 
-Directions
+Directions <br>
 Combine the mango, cucumber, jalapeno, red onion, lime juice and cilantro leaves and mix well. 
 Season with salt and pepper, to taste. 
+<br>
+<br>
+Documentation website: https://wp.nyu.edu/webdev/
