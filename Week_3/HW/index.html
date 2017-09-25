@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Beginning CSS with Recipe</title>
+	<style type="text/css">
+		/* grouped selectors, same styles, different tags */
+		div, main, article, section, aside {
+			min-height: 100px;
+			font-family: helvetica
+		}
+
+		header, footer {
+			background-color: rgb(200,200,200);
+			height: auto;			
+			padding: 20px;
+			color: rgb(255,255,255);
+		}
+		
+		main.wrapper{
+			width: 900px;
+			/* center a div within the browser using margin 0 auto */
+			margin: 0 auto;
+
+		}
+
+		article {
+			width: 600px;
+			float: right;
+			/* add 10px margin around will add 20px to our width and height */
+			margin: 10px;
+			/* 600px - 10px - 10px = 580 */
+			width: 580px;
+			padding: 10px;
+			/* 580px - 10px - 10px = 560 */
+			width: 560px;
+		}
+
+		aside {
+			width: 300px;
+			float: right;
+			margin: 10px;
+			/* 300px - 10px - 10px = 280 */
+			width: 280px;
+			background-color: rgb(220,220,220);
+			padding: 20px;
+			width: 240px;
+
+		}
+		/* when we are done floating elements we need to clear immediately after */
+		.clear {
+			clear: both;
+			height: 0;
+		}
+
+		#nav {
+			text-align:center;
+			float: right;
+		}
+
+		#nav li {
+			display:inline;
+		}
+
+		#nav a {
+			text-decoration:none; 
+			padding:50px; /* variable width */
+		    width: auto;
+		    text-align: center;
+		    line-height: 100px;
+		    color: #ffffff;
+		    text-decoration: none;
+		}
+		
+		/*Style for dropdown links*/
+		li:hover ul a {
+		    color: #000000;
+		    height: 40px;
+		    line-height: 40px;
+		}
+
+		/*Hide dropdown links until they are needed*/
+		li ul {
+		    display: none;
+		}
+
+		/*Display the dropdown on hover*/
+		ul li a:hover + .hidden, .hidden:hover {
+		    display: inherit;
+		}
+		
+
+		#footer {
+			min-height: 50px
+		}
+
+		#footer ul {
+		    list-style-type:none;
+		    margin:0;
+		    padding:0;
+		    position: absolute;
+		}
+		
+		/*Create a horizontal list with spacing*/
+		#footer li {
+		    display:inline-block;
+		    margin-right: 50px;
+		    padding: 20px
+		}
+
+	</style>
+</head>
+
+<body>
+	<nav>
+		<ul id="nav">
+			<li><a href="#">About</a></li>
+		        <li><a href="#">Contact</a></li>
+		        <li><a href="#">Recipes</a>
+		        	<ul class="hidden">
+		                <li><a href="#">Appetizers</a></li>
+		                <li><a href="#">Drinks</a></li>
+		                <li><a href="#">Breakfast</a>
+		                <li><a href="#">Dessert</a>
+		                <li><a href="#">Entrées</a></li>
+		                <li><a href="#">Seasonal</a></li>
+		                <li><a href="#">Sides & Sauces</a>
+		                <li><a href="#">Snacks </a></li>
+					</ul>
+	        </li>
+		</ul>
+	</nav>
+	<div>
+		<header>
+			<h1>LOGO</h1>
+		</header>
+		<main class="wrapper">
+			<article>
+				<h1>Mango Salsa</h1>
+				<figure>
+					<img src="http://www.fillmurray.com/g/560/300">
+				</figure>
+				<section>
+					<p>I bet this mango salsa would be fantastic on fish tacos or just about any fresh, Mexican-themed dish, really. I can confirm that it goes well with chips, guacamole and black bean tacos. You could also serve it on salad or just eat it straight out of the bowl as a salad. It’s that good. (I stole this from a recipe on cookieandkatie.com).</p>
+				<hr>
+				</section>
+				<section>
+					<h3>Ingredients</h3>
+						<ul>
+					        <li>1 mango, peeled and diced</li>
+					        <li>1/2 cup peeled, diced cucumber</li>
+					        <li>1 tablespoon finely chopped jalapeno</li>
+					        <li>1/3 cup diced red onion </li>
+					        <li>1 tablespoon lime juice </li>
+					        <li>1/3 cup roughly chopped cilantro leaves </li>
+					        <li>Salt and pepper</li>
+					    </ul>
+				</section>
+					<h3>Directions</h3>
+					    <ol>
+					        <li> Combine the mango, cucumber, jalapeno, red onion, lime juice and cilantro leaves and mix well.  </li>
+					        <li> Season with salt and pepper, to taste. </li>
+					    </ol>
+				</section>
+			</article>
+			<aside>
+				<h2>Details</h2>
+				<p> <hr>
+					Time: 5 min<br>
+					Yeild: 4 servings<br><br>
+					<strong>Nutrition per serving:</strong><br>
+					Calories: 44<br>
+					Fat: 0.2 g<br>
+					Carbohydrates: 11 g<br>
+					Fiber: 1 g<br>
+					Protien: 0.6 g<br>
+				</p>
+			</aside> <br>
+			<aside>
+				<h2>Recent Posts</h2>
+				    <ul>
+				        <li><a href="#">Plantain Soup</a></li>
+				        <li><a href="#">Banana-Walnut Bread</a></li>
+				        <li><a href="#">The Best Chocolate Chip Cookies</a></li>
+				        <li><a href="#">Traditional Arroz con Pollo</a></li>
+				        <li><a href="#">Pasta Pomodoro</a></li>
+				        <li><a href="#">Cilantro Lime Crema</a>
+				        <li><a href="#">Crispy Smashed Potatoes</a>
+				        </li>
+				    </ul>
+				</p>
+			</aside>
+			<!-- clear out so our wrapping div (in this case it's the main tag) wraps around -->
+			<!-- we will discuss several clear fixes and alternatives next week -->
+			<br class="clear">
+		</main>
+	<footer id="footer">
+	        <!-- social links -->
+	        <ul>
+	            <li>&copy; Recipe Blog 2017.</li>
+		        <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a>
+	        </ul>
+	</footer>
+	</div>
+</body>
+</html>
