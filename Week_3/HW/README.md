@@ -1,3 +1,3 @@
-#Week 3
-Week 4 Homework Documentation:
-https://wp.nyu.edu/webdev/
+<strong> Week 3 </strong><br>
+Week 4 Bonus Documentation:<br>
+https://wp.nyu.edu/webdev/2017/09/25/week-4/

@@ -1,4 +1,4 @@
-#Week 1
+<strong>Week 1</strong>
 
 Week 2 Homework: <br>
 
