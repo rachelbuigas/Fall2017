@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+
+/* Specify in CSS */
+	/*font-family: 'Kaushan Script', cursive;*/
+
+/* full sized background */
+html {
+	background: url(../img/bg.jpg) no-repeat center center fixed;
+	/* Chrome and Safari */
+	-webkit-background-size: cover;
+	/* Mozerilla Firefox */
+	-moz-background-size: cover;
+	/* Opera */
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+/* for positioning purposes */
+.container {
+	width: 900px;
+	margin: 0 auto;
+}
+
+.polaroid {
+	position: relative;
+	width: 240px;
+	display: inline-block;
+	margin: 20px;
+}
+
+/* scale to fit */
+.polaroid img {
+	width: 100%;
+	height: auto;
+	border: 10px solid white;
+	border-bottom: 45px solid white;
+}
+
+.polaroid p {
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	color: #EEE;
+	font-family: 'Kaushan Script', cursive;
+	bottom: 0px;
+	left: 10px;
+
+}
+
+
+
+
+
+
+
+
+
+
