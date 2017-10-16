@@ -1,0 +1,182 @@
+/*
+Responsive 996px grid system ~ Style CSS.
+Copyright 2013, Josh Cope
+*/
+
+/* =============================================================================
+   Site Styles
+   ========================================================================== */
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+
+/* grouped selectors */
+div, header, footer, main, article, aside, section {
+	min-height: 100px;
+/*	background-color: rgba(0, 100, 255, .2);	
+*/}
+
+
+/* margin command to center */
+main, header {
+	width: 80%;
+	margin: 0 auto;
+}
+
+/* use a pseudo class selector to add a block of empty
+content with zero height that clears both sides.
+This helps us fix wrappign issues when floaring. 
+We apply the clear fix to the wrapper/container element. */
+.clearfix:after {
+	display: block;
+	clear: both;
+	content: "";
+	/* to ensure backwards compatibility */
+	height: 0;
+	font-size: 0;
+	visibility: hidden;
+}
+
+/* descendant selector for more css specificity */
+article.col-pixels section {
+	/* 960px container - 6*10px margins */
+	width: 300px;
+	margin: 0 10px;
+	float: left;
+}
+
+
+/* descendant selector */
+article.col-fluid section {
+	margin: 2.5%;
+	width: 20%;
+	float: left;
+}
+
+
+
+/************* NAV BAR ****************/
+
+ul.menu {
+	/* hide bullets */
+	list-style-type: none;
+	margin: 0 auto;
+	padding: 0px;
+	display: flex;
+	justify-content: space-around;
+	}
+
+
+li {
+	/* float: left;
+	would need a clear fix if using float */ 
+	/* display: inline
+	let it stack, but does not work with display block */
+	display: inline-block;
+	padding: 50px 10px 10px 10px;
+}
+
+/* only apply to anchor tags within a list item */
+ul.menu li a {
+/* anchor tags can be difficult to display inline, 
+here we will tell them to behave like block level elements*/
+	display: block;
+	text-align: center;
+	width: 150%;
+	padding: 5px;
+	text-decoration: none;
+	color: #333;
+
+}
+
+
+ul.menu li a:hover {
+	background-color: #111;
+	color: #fff;
+	border-radius: 20px;
+}
+
+
+li a:active{
+	background-color: #888
+}
+
+
+/************* PROJECTS ****************/
+
+ul.projects {
+	/* hide bullets */
+	list-style-type: none;
+	padding: 0px;
+	display: flex;
+	justify-content: space-around;
+	}
+
+
+/* only apply to anchor tags within a list item */
+ul.projects li a {
+/* anchor tags can be difficult to display inline, 
+here we will tell them to behave like block level elements*/
+	display: block;
+	text-align: center;
+	width: 150%;
+	padding: 5px;
+	text-decoration: none;
+	background-color: #111;
+	color: #fff;
+	border-radius: 20px;
+
+}
+
+
+ul.projects li a:hover {
+	background-color: red;
+}
+
+
+li a:active{
+	background-color: #888;
+}
+
+
+
+/* =============================================================================
+   Page Styles
+   ========================================================================== */
+
+/* =============================================================================
+   Media Queries
+   ========================================================================== */
+
+/* Tablet Portrait size to Base 996px */
+@media only screen and (min-width: 768px) and (max-width: 995px) {}
+
+/* All Mobile Sizes */
+@media only screen and (max-width: 767px) {}
+
+/* Mobile Landscape Size to Tablet Portrait */
+@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+/* Mobile Portrait Size to Mobile Landscape Size */
+@media only screen and (max-width: 479px) {}
+
+
+/* =============================================================================
+   Font-Face
+   ========================================================================== */
+/* This is the proper syntax for an @font-face file
+
+/* @font-face {
+font-family: 'FontName';
+src: url('../fonts/FontName.eot');
+src: url('../fonts/FontName.eot?iefix') format('embedded-opentype'),
+url('../fonts/FontName.woff') format('woff'),
+url('../fonts/FontName.ttf') format('truetype'),
+url('../fonts/FontName.svg#FontName') format('svg');
+font-weight: normal;
+font-style: normal; }
+*/

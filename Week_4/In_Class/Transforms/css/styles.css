@@ -17,7 +17,6 @@ body {
 .container{
     width:900px;
     margin:0 auto;
-    padding: 10px;
 }
 
 .polaroid {
@@ -118,6 +117,7 @@ nav a:hover {
 .rotate-left {
     transform: rotate(-10deg);
     transition: all 1s ease-in;
+    transform-origin: 100% 0%;
 }
 
 .rotate-left:hover {
