@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Java Script 101</title>
+	<script type="text/javascript">
+		var temp = 73;
+			// string is a literal, temp is a variable
+			console.log("Today's temperature is: " + temp + " degrees F.")
+
+		function startMe() {
+			// sumValues(234,1);
+		}
+
+		function sumValues(a,b) {
+			// console.log(a);
+			// console.log(b);
+			var sum = a+b;
+			alert(sum);
+		}
+
+		// Put "is" to know it a boolean
+		// One equal assigns a value
+		var isOn = true;
+
+		// Two equals will check if it is the same
+		// Three equals checks is it true and is it the same data type
+		function switchOnOff() {
+			if (isOn === true) {
+			alert ("isOn is currently true about to switch to false!");
+			isOn = false;
+		} else {
+			// do this if the condition above evaluated to false
+			alert ("isOn is currently false about to switch to true!");
+			isOn = !isOn;
+			}
+		}
+
+		function countToN(n) {
+			for (var i = 0; i < 10; i++) {
+				// this happens when statement 2 exaluates to true
+				console.log(i);
+			}
+		}
+
+
+
+	</script>
+</head>
+<body onload="startMe()">
+	<button onclick="sumValues(354.77, 348928)">Click me</button>
+
+	<button onclick="switchOnOff()">Switch Boolean</button>
+
+	<button onclick="countToN(250)">Count to the number we pick</button>
+
+
+
+</body>
+</html>
