@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays 101</title>
+</head>
+<body>
+<script type="text/javascript">
+	var months = ['January','February','March', 'April', 'May', 'June', 'July', 'August', 'September','October', 'November', 'December'];
+
+	// length is a property tht we can access from any array using dot notations
+	console.log(months.length);
+
+	var lastMonth = months.pop();
+	console.log(months);
+	console.log(lastMonth);
+
+	// . push() to add an item to the end of an array
+	months.push ('December');
+	console.log(months);
+
+	// grab the 6th item in our array
+	console.log(months[5]);
+
+	//loop through our array and modify,access,etc. individually
+	for (var i = 0; i < months.length; 1++) {
+		console.log(i + ':' + months[i]);
+	}
+
+	// Loop through backwares to deleve the last item
+	for (var i = months.length-1;i >= 0; 1--) {
+	console.log(months [i]);
+	var dm = months.pop();
+		console.log ('Deleted' + dm + 'new array length is' + months.length)	
+	}
+
+	function randomNumber(n) {
+		var rn = Math.round(n*Math.random());
+		return rn;
+	}
+
+	// Use out random number function to pick a random item in your array
+	var randomMonth = months[randomNumber(months.length)];
+	console.log(randomMonth);
+	
+</script>
+</body>
+</html>
